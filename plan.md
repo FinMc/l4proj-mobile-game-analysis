@@ -1,9 +1,9 @@
 # Plan
 
-* PROJECT TITLE
-* YOUR NAME
-* STUDENT ID
-* SUPERVISOR NAME
+* Modelling and analysis of a mobile game usage
+* Fin McCallum
+* 2362646m
+* Oana Andrei
 
 Week-by-week plan for the whole project. Update this as you go along.
 
