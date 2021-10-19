@@ -21,5 +21,15 @@
 
 ## 8 Oct 2021
 
-* *0.5 hour* Created GitLab repository and copied project template
-* *0.5 hour* meeting with supervisor
+* *0.5 hours* Created GitLab repository and copied project template
+* *0.5 hours* meeting with supervisor
+
+## 13 Oct 2021
+* *5 hours* Read through readings especially (Andrei, 2014) (Andrei, 2016)
+
+## 14 Oct 2021
+* *3 hours* Working through dataset, changed data to vertical to understand easier, can now view in IDE
+
+## 15 Oct 2021
+* *0.5 hours* meeting with supervisor
+* *1 hour* Formulate ways to get data into form needed for GPAM & PRISM
