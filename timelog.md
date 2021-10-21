@@ -33,3 +33,6 @@
 ## 15 Oct 2021
 * *0.5 hours* meeting with supervisor
 * *1 hour* Formulate ways to get data into form needed for GPAM & PRISM
+
+## 21 Oct 2021
+* *3 hours* extracting data from dataset with script

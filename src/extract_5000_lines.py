@@ -1,16 +1,20 @@
 import sys
+import operator
 import ijson
+
 
 inp_file_name = sys.argv[1]
 out_file_name = sys.argv[2]
 
-# n = 5000
-# with open(inp_file_name) as inp:
-#     with open(out_file_name, "w") as out:
-#         for i in range(5000):
-#             out.write(inp.readline())
+kinds = {}
+with open(inp_file_name, "rb") as inp:
+    out = ijson.items(inp, 'item.page_hits.item.user')
+    for num, item in enumerate(out):
+        if item in kinds:
+            kinds[item] += 1
+        else:
+            kinds[item] = 1
 
-with open(inp_file_name) as inp:
-    objects = ijson.items(inp, 'games.item')
-    columns = list(objects)
-    print(columns)
+kinds = dict(sorted(kinds.items(), key=operator.itemgetter(1), reverse=True))
+for k, v in kinds.items():
+    print(k, " : ", v)
