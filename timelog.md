@@ -37,3 +37,6 @@
 ## 21 Oct 2021
 * *3 hours* extracting data from dataset with script
 * *2 hours* Created script to extract one users actions in aim to get data in correct form
+
+## 22 Oct 2021
+* *0.5 hours* Meeting with supervisor with progress made with the script
