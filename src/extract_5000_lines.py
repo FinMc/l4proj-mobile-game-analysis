@@ -1,13 +1,16 @@
+from os import curdir
 import sys
 import operator
 import ijson
+import json
+from datetime import datetime
 
 
 inp_file_name = sys.argv[1]
 out_file_name = sys.argv[2]
 
 
-## Generate txts
+# Generate txts
 # kinds = {}
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item.page_hits.item.user')
@@ -24,9 +27,23 @@ out_file_name = sys.argv[2]
 with open(inp_file_name, "rb") as inp:
     out = ijson.items(inp, 'item.page_hits.item')
     one_user = (o for o in out if o['user'] == "Manakish")
+    outfile = [{"deviceid": "1", "sessions": []}]
+    cur_session = []
+    
     for action in one_user:
-        print("{ ", end="")
-        for key in action.keys():
-            if key not in ["cred_hashed_pw", "message", "user", "cred_username"]:
-                print(key + " : "+ action[key], end=", ")
-        print("}")
+        cur_session_time = datetime.strptime(action["time"], "%Y-%m-%d %H:%M:%S.%f")
+        break
+    for action in one_user:
+        current_action_time = datetime.strptime(action["time"], "%Y-%m-%d %H:%M:%S.%f")
+        
+        #If more than 30mins between action, different session
+        if divmod((current_action_time - cur_session_time).total_seconds(), 60)[0] > 30:
+            outfile[0]["sessions"].append(cur_session)
+            cur_session = []
+            cur_session_time = current_action_time
+
+        cur_session.append({"timestamp": action["time"], "data": action["kind"]})
+
+
+with open(out_file_name, 'w', encoding='utf-8') as f:
+    json.dump(outfile, f, ensure_ascii=False, indent=4)
