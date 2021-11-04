@@ -52,3 +52,6 @@
 * *1 hour* Get data from multiple users and construct a Markov Chain diagram
 * *2 hours* Using the category and sub categories, create a mapping so the number of "kinds" is reduced
 * *0.5 hours* Create a Markov chain for 5+ users with the smaller dataset
+
+## 4 Nov 2021
+* *2 hours* Able to parse all users in the file inplace
