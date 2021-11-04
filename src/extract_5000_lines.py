@@ -1,4 +1,3 @@
-from os import curdir
 import sys
 import operator
 import ijson
