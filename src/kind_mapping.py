@@ -1,4 +1,4 @@
-{
+mapping = {
     "home_screen_logout": "logout",
     "registration": "registration",
     "challenge_sent": "challenge_sent",
