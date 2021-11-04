@@ -40,3 +40,15 @@
 
 ## 22 Oct 2021
 * *0.5 hours* Meeting with supervisor with progress made with the script
+
+## 27 Oct 2021
+* *2 hours* Categorise the kinds into sub categories
+
+## 2 Nov 2021
+* *4 hours* Extract data for one user and put it in form needed for dataset
+
+## 3 Nov 2021
+* *2 hours* Get data in form for 1 user for all categories
+* *1 hour* Get data from multiple users and construct a Markov Chain diagram
+* *2 hours* Using the category and sub categories, create a mapping so the number of "kinds" is reduced
+* *0.5 hours* Create a Markov chain for 5+ users with the smaller dataset
