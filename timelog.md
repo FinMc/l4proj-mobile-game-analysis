@@ -55,3 +55,7 @@
 
 ## 4 Nov 2021
 * *2 hours* Able to parse all users in the file inplace
+
+## 9 Nov 2021
+* *1 hour* Stripped the users from performing same action twice
+* *1 hour* Creates a user_data file that shows how many days each user has been on
