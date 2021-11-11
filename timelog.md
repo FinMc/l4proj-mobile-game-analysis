@@ -59,3 +59,6 @@
 ## 9 Nov 2021
 * *1 hour* Stripped the users from performing same action twice
 * *1 hour* Creates a user_data file that shows how many days each user has been on
+
+## 11 Nov 2021
+* *2 hours* Choose time intervals for data and generate models

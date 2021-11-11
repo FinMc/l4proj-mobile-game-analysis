@@ -22,4 +22,3 @@ with open(inp_file_name, "rb") as inp:
 
     for user in users:
         print("{user}: {time}".format(user=user[0], time=user[1]))
-
