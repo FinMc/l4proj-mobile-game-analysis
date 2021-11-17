@@ -62,3 +62,7 @@
 
 ## 11 Nov 2021
 * *2 hours* Choose time intervals for data and generate models
+
+## 17 Nov 2021
+* *0.5 hours* Added UseStart & UseStop to the file to add states when sessions start and end
+* *3.5 hours* Running PAM Models for each of the time sets with k=2 & k=3

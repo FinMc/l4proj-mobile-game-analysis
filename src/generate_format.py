@@ -290,7 +290,9 @@ with open(inp_file_name, "rb") as inp:
             if mappings.get(line['kind']) != prev_kind:
                 # If more than 30mins between action, different session
                 if divmod((current_action_time - cur_session_time).total_seconds(), 60)[0] > 30:
-                    outfile[user_id]["sessions"].append([])
+                    outfile[user_id]["sessions"].append([{"timestamp": current_action_time.strftime("%Y-%m-%d %H:%M:%S"), "data": "UseStart"}])
+                    if len(outfile[user_id]["sessions"]) > 1:
+                        outfile[user_id]["sessions"][-2].append({"timestamp": cur_session_time.strftime("%Y-%m-%d %H:%M:%S"), "data": "UseStop"})
 
                 outfile[user_id]["sessions"][-1].append(
                     {"timestamp": current_action_time.strftime("%Y-%m-%d %H:%M:%S"), "data": mappings[line["kind"]]})
