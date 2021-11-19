@@ -66,3 +66,6 @@
 ## 17 Nov 2021
 * *0.5 hours* Added UseStart & UseStop to the file to add states when sessions start and end
 * *3.5 hours* Running PAM Models for each of the time sets with k=2 & k=3
+
+## 19 Nov 2021
+* *2 hours* Correctly ran PAM models again with UseStop at end of each user

@@ -300,6 +300,10 @@ with open(inp_file_name, "rb") as inp:
             outfile[user_id]["lastSeen"] = current_action_time.strftime(
                 "%Y-%m-%d %H:%M:%S")
 
+#Add the final UseStop to each user
+for i in range(len(outfile)):
+    outfile[i]["sessions"][-1].append({"timestamp": outfile[i]["sessions"][-1][-1]["timestamp"], "data": "UseStop"})
+
 
 with open(out_file_name+".json", 'w', encoding='utf-8') as f:
     json.dump(outfile, f, ensure_ascii=False, indent=4)
