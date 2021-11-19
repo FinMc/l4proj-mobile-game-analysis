@@ -1,3 +1,7 @@
+max_per_session = 3083
+max_session_user = Jamie
+max_session_user_number = 115
+
 l17r  :  61131
 apropos0  :  59399
 Frp97  :  54268
