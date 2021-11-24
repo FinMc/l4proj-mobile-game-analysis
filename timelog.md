@@ -69,3 +69,7 @@
 
 ## 19 Nov 2021
 * *2 hours* Correctly ran PAM models again with UseStop at end of each user
+
+## 24 Nov 2021
+* *2 hours* Generating stats from userset
+* *3 hours* Creating a PRISM output file to txt converter, takes multiple files and multiple tests in file
