@@ -73,3 +73,9 @@
 ## 24 Nov 2021
 * *2 hours* Generating stats from userset
 * *3 hours* Creating a PRISM output file to txt converter, takes multiple files and multiple tests in file
+
+## 29 Nov 2021
+* *3 hours* Looking at number of events in sessions and graphing them in excel
+
+## 05 Dec 2021
+* *2.5 hours* Investigating the 3k event session and writing results

@@ -2,22 +2,22 @@
   {
   	"name":"VisitProbInit",
   	"properties":"const int N; const int j; \nP=?[F<=N (y=j)]\n",
-  	"arguments":"-const N=50,j=0:1:15"
+  	"arguments":"-const N=50,j=0:1:24"
   },
   {
   	"name":"StepCountInit",
   	"properties":"const int N; const int j; \nR{\"r_Steps\"}=?[F (y=j)]\n",
-  	"arguments":"-const N=50,j=0:1:15"
+  	"arguments":"-const N=50,j=0:1:24"
   },  
   {
   	"name":"VisitProbBtw",
   	"properties":"const int N; const int j1; const int j2; \nfilter(state,P=?[!(\"UseStop\") U<=N (y=j2)],y=j1)\n",
-  	"arguments":"-const N=50,j1=01:1:15,j2=0:1:15"
+  	"arguments":"-const N=50,j1=01:1:24,j2=0:1:24"
   },  
   {
   	"name":"StepCountBtw",
   	"properties":"const int N; const int j2; const int j1; \nfilter(state,R{\"r_Steps\"}=?[F (y=j2)],y=j1)\n",
-  	"arguments":"-const N=50,j1=0:1:15,j2=0:1:15"
+  	"arguments":"-const N=50,j1=0:1:24,j2=0:1:24"
   },  
   {
   	"name":"SessionLength",
@@ -38,65 +38,5 @@
   	"name":"VisitCountInit_ATMainView",
   	"properties":"const int N; \nfilter(state,R{\"r_ATMainView\"}=?[C<=N],\"UseStart\")\n",
   	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATOverallUsageView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATOverallUsageView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATStackedBarsView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATStackedBarsView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATPeriodSelectorView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATPeriodSelectorView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATAppsInPeriodView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATAppsInPeriodView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATSettingsView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATSettingsView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATStatsView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATStatsView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATUsageBarChartATOverallUsageView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATUsageBarChartATOverallUsageView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATFeedbackView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATFeedbackView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATUsageBarChartATStatsView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATUsageBarChartATStatsView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATInfoView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATInfoView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATUsageBarChartATAppsInPeriodView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATUsageBarChartATAppsInPeriodView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  },  
-  {
-  	"name":"VisitCountInit_ATTaskView",
-  	"properties":"const int N; \nfilter(state,R{\"r_ATTaskView\"}=?[C<=N],\"UseStart\")\n",
-  	"arguments":"-const N=50"
-  } 
+  }
 ]

@@ -25,6 +25,28 @@ inp_file_name = sys.argv[1]
 #     for user in users:
 #         print("{user}: {time}".format(user=user[0], time=user[1]))
 
+with open(inp_file_name, "rb") as inp:
+    out = ijson.items(inp, 'item')
+
+    users = []
+    type_dict = {}
+    for user in out:
+        on = True
+        for session in user['sessions']:
+            if len(session) > 3050:
+                for event in session:
+                    if type_dict.get(event["data"]):
+                        type_dict[event["data"]] += 1
+                    else:
+                        type_dict[event["data"]] = 1
+                print(session)
+                break
+            users.append(len(session))      
+
+    # users.sort()
+    # for user in users:
+    #     print("{0},".format(user))
+        #print("\n\n\n\n")
 
 
 #Session Length
@@ -45,21 +67,21 @@ inp_file_name = sys.argv[1]
 # print("Max: {max}".format(max=np.max(math_sessions)))
 # print("STD: {sd}".format(sd=np.std(math_sessions)))
 
-#No. Events per Session
-# with open(inp_file_name, "rb") as inp:
-#     out = ijson.items(inp, 'item')
-#     no_events_session = []
-#     for user in out:
-#         for session in user["sessions"]:
-#             no_events_session.append(len(session))
+# No. Events per Session
+with open(inp_file_name, "rb") as inp:
+    out = ijson.items(inp, 'item')
+    no_events_session = []
+    for user in out:
+        for session in user["sessions"]:
+            no_events_session.append(len(session))
 
 
-# math_sessions = np.array(no_events_session)
-# print("Average: {avg}".format(avg=np.mean(math_sessions)))
-# print("Median: {med}".format(med=np.median(math_sessions)))
-# print("Min: {min}".format(min=np.min(math_sessions)))
-# print("Max: {max}".format(max=np.max(math_sessions)))
-# print("STD: {sd}".format(sd=np.std(math_sessions)))
+math_sessions = np.array(no_events_session)
+print("Average: {avg}".format(avg=np.mean(math_sessions)))
+print("Median: {med}".format(med=np.median(math_sessions)))
+print("Min: {min}".format(min=np.min(math_sessions)))
+print("Max: {max}".format(max=np.max(math_sessions)))
+print("STD: {sd}".format(sd=np.std(math_sessions)))
 
 #No. Sessions
 # with open(inp_file_name, "rb") as inp:
@@ -78,19 +100,19 @@ inp_file_name = sys.argv[1]
 
 
 #No. Events per User
-with open(inp_file_name, "rb") as inp:
-    out = ijson.items(inp, 'item')
-    no_events_user = []
-    for user in out:
-        user_total = 0
-        for session in user["sessions"]:
-            user_total += len(session)
-        no_events_user.append(user_total)
+# with open(inp_file_name, "rb") as inp:
+#     out = ijson.items(inp, 'item')
+#     no_events_user = []
+#     for user in out:
+#         user_total = 0
+#         for session in user["sessions"]:
+#             user_total += len(session)
+#         no_events_user.append(user_total)
 
 
-math_sessions = np.array(no_events_user)
-print("Average: {avg}".format(avg=np.mean(math_sessions)))
-print("Median: {med}".format(med=np.median(math_sessions)))
-print("Min: {min}".format(min=np.min(math_sessions)))
-print("Max: {max}".format(max=np.max(math_sessions)))
-print("STD: {sd}".format(sd=np.std(math_sessions)))
+# math_sessions = np.array(no_events_user)
+# print("Average: {avg}".format(avg=np.mean(math_sessions)))
+# print("Median: {med}".format(med=np.median(math_sessions)))
+# print("Min: {min}".format(min=np.min(math_sessions)))
+# print("Max: {max}".format(max=np.max(math_sessions)))
+# print("STD: {sd}".format(sd=np.std(math_sessions)))

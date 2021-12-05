@@ -49,7 +49,7 @@ while loop < len(sys.argv) - 1:
             test_id = rrow["pctl"]["name"] + "k"+str(rrow["k"])
             if outs.get(test_id) is None:
                 outs[test_id] = {"name": rrow["pctl"]["name"], "k": k,
-                                 "start": start, "end": end, "min": mind, "results": []}
+                                "start": start, "end": end, "min": mind, "results": []}
             value = rrow["result"]["value"]
             if value == None:
                 value = -1
