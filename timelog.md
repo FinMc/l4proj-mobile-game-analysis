@@ -79,3 +79,6 @@
 
 ## 05 Dec 2021
 * *2.5 hours* Investigating the 3k event session and writing results
+
+## 06 Dec 2021
+* *2.5 hours* Analysing 2 more long sessions and writing about it

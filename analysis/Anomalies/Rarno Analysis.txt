@@ -1,0 +1,34 @@
+=-=-=2nd longest event=-=-=
+Username: 				Rarno
+Total Events: 			3468
+Length of long session: 2964
+First Login: 			2020-04-09
+Last Login: 			2020-04-10
+Event Time: 			2020-04-09 13: 37: 16
+Event Complete Time: 	2020-04-09 15: 41: 14
+{"UseStart": 1,
+"registration": 1,
+"history": 28,
+"joined_queue": 17,
+"login": 1021,
+"practice_select": 11,
+"practice_char": 4,
+"practice_game": 4,
+"home": 195,
+"searching": 17,
+"choose_char": 33,
+"profile": 16,
+"refresh": 913,
+"gameplay": 132,
+"move_viewed": 273,
+"rolls_fastforwarded": 248,
+"gameover": 20,
+"leaderboard": 10,
+"left_queue": 3,
+"game_history": 1,
+"game_abandoned": 9,
+"challenge_sent": 6,
+"UseStop": 1
+}
+
+This was the users first day with the game and their first session. They refreshed the screen many times so 2/3rds of their events are login and refresh. Their first session was 2 hours long and they're getting used to how the game works with choosing characters, trying practice games and making games more efficient with fast forwards.

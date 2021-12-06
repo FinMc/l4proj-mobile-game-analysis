@@ -1,0 +1,29 @@
+=-=-=Top 10 longest event=-=-=
+Username: 				Jamie
+Total Events: 			23560
+Length of long session: 2459
+First Login: 			2020-04-11
+Last Login: 			2020-05-12
+Event Time: 			2020-04-16 18: 41: 17
+Event Complete Time: 	2020-04-16 21: 58: 49
+{"UseStart": 1,
+"gameplay": 250,
+"rolls_fastforwarded": 460,
+"move_viewed": 461,
+"home": 322,
+"refresh": 291,
+"login": 496,
+"leaderboard": 30,
+"game_abandoned": 2,
+"joined_queue": 41,
+"left_queue": 9,
+"choose_char": 42,
+"gameover": 38,
+"searching": 9,
+"history": 3,
+"challenge_sent": 1,
+"profile": 1,
+"logout": 1,
+"UseStop": 1
+}
+
