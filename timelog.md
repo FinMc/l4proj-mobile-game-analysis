@@ -85,3 +85,6 @@
 
 ## 08 Dec 2021
 * *1.5 hours* Analysis meow and found out that refresh & login are repeated many times
+
+## 09 Dec 2021
+* *2 hours* Remove repeated patterns like refresh & login so now the data is more accurate, refreshed all
