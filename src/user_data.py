@@ -25,6 +25,7 @@ inp_file_name = sys.argv[1]
 #     for user in users:
 #         print("{user}: {time}".format(user=user[0], time=user[1]))
 
+# Session lengths to csv
 with open(inp_file_name, "rb") as inp:
     out = ijson.items(inp, 'item')
 
@@ -32,8 +33,10 @@ with open(inp_file_name, "rb") as inp:
     type_dict = {}
     for user in out:
         on = True
+        # summer = 0
         for session in user['sessions']:
-            if len(session) == 1854:
+            # summer += len(session)
+            if len(session) == 2640:
                 for event in session:
                     if type_dict.get(event["data"]):
                         type_dict[event["data"]] += 1
@@ -42,12 +45,12 @@ with open(inp_file_name, "rb") as inp:
                 print(session)
                 # print(user["deviceid"])
                 break
-            # users.append(len(session))      
-
-    # users.sort()
+            # users.append(len(session))  
+        # users.append([user["deviceid"], summer])
+    # users.sort(key=lambda x: x[1])
+    # users.reverse()
     # for user in users:
-    #     print("{0},".format(user))
-        #print("\n\n\n\n")
+    #     print("{0} : {1}".format(user[0], user[1]))
 
 
 #Session Length

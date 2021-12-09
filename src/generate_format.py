@@ -268,7 +268,9 @@ with open(inp_file_name, "rb") as inp:
             cur_session = []
             if len(outfile[user_id]['sessions']) == 0:
                 cur_session_time = datetime(2000, 1, 1)  # Start of century
+                prev_prev_kind = ""
                 prev_kind = ""
+                prev_prev_prev_kind = ""
                 if "." in line["time"]:
                     outfile[user_id]["firstSeen"] = datetime.strptime(
                         line["time"], "%Y-%m-%d %H:%M:%S.%f").strftime("%Y-%m-%d %H:%M:%S")
@@ -279,6 +281,9 @@ with open(inp_file_name, "rb") as inp:
                 cur_session_time = datetime.strptime(
                     outfile[user_id]['sessions'][-1][-1]["timestamp"], "%Y-%m-%d %H:%M:%S")
                 prev_kind = outfile[user_id]['sessions'][-1][-1]["data"]
+                if len(outfile[user_id]['sessions'][-1]) >= 2:
+                    prev_prev_kind = outfile[user_id]['sessions'][-1][-2]["data"]
+
 
             if "." not in line["time"]:
                 current_action_time = datetime.strptime(
@@ -287,7 +292,7 @@ with open(inp_file_name, "rb") as inp:
                 current_action_time = datetime.strptime(
                     line["time"], "%Y-%m-%d %H:%M:%S.%f")
 
-            if mappings.get(line['kind']) != prev_kind:
+            if mappings.get(line['kind']) not in  [prev_kind, prev_prev_kind]:
                 # If more than 30mins between action, different session
                 if divmod((current_action_time - cur_session_time).total_seconds(), 60)[0] > 30:
                     outfile[user_id]["sessions"].append([{"timestamp": current_action_time.strftime("%Y-%m-%d %H:%M:%S"), "data": "UseStart"}])
@@ -320,5 +325,5 @@ for i in range(len(outfile)):
         print("No Sessions: " + outfile[i]["deviceid"])
 
 
-with open(out_file_name+".json", 'w', encoding='utf-8') as f:
+with open(out_file_name, 'w', encoding='utf-8') as f:
     json.dump(outfile, f, ensure_ascii=False, indent=4)
