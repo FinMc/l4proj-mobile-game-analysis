@@ -82,3 +82,6 @@
 
 ## 06 Dec 2021
 * *2.5 hours* Analysing 2 more long sessions and writing about it
+
+## 08 Dec 2021
+* *1.5 hours* Analysis meow and found out that refresh & login are repeated many times

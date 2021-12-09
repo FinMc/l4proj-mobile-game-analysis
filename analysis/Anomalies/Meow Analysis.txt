@@ -1,0 +1,264 @@
+=-=-=Top 20 event anomaly=-=-=
+Username: 				meow
+Total Events: 			2377
+Length of long session: 1854
+First Login: 			2020-04-16
+Last Login: 			2020-04-17
+Event Time: 			2020-04-16 18: 43: 49
+Event Complete Time: 	2020-04-16 20: 16: 06
+{"UseStart": 1,
+"gameplay": 218,
+"rolls_fastforwarded": 418,
+"move_viewed": 419,
+"home": 257,
+"login": 309,
+"refresh": 124,
+"gameover": 31,
+"joined_queue": 33,
+"choose_char": 34,
+"profile": 2,
+"game_abandoned": 4,
+"leaderboard": 3,
+"UseStop": 1
+}
+
+The user meow only has 3 sessions to her name with this being her second session, she has played practice games and is now in for a heavy game session and her last session lasts only 1 minute. 
+
+
+At the time 19:33:22 to 19:33:34 there are 29 refresh & 29 login event that may show there is a bug in the way it is logged.
+
+    "timestamp": "2020-04-16 19:33:22",
+                    "data": "home"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:26",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:26",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:27",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:27",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:28",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:28",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:28",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:28",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:28",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:28",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:28",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:28",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:29",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:30",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:31",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:32",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:32",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:32",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:32",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:32",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:32",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:33",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:33",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:33",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:33",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:33",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:33",
+                    "data": "login"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:34",
+                    "data": "refresh"
+                },
+                {
+                    "timestamp": "2020-04-16 19:33:34",
+                    "data": "login"
+                },

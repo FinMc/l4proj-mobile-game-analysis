@@ -33,15 +33,16 @@ with open(inp_file_name, "rb") as inp:
     for user in out:
         on = True
         for session in user['sessions']:
-            if len(session) == 2459:
+            if len(session) == 1854:
                 for event in session:
                     if type_dict.get(event["data"]):
                         type_dict[event["data"]] += 1
                     else:
                         type_dict[event["data"]] = 1
                 print(session)
+                # print(user["deviceid"])
                 break
-            users.append(len(session))      
+            # users.append(len(session))      
 
     # users.sort()
     # for user in users:

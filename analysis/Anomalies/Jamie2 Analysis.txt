@@ -27,3 +27,4 @@ Event Complete Time: 	2020-04-16 21: 58: 49
 "UseStop": 1
 }
 
+Jamie is a very active user who has long game sessions. He played at least 38 games as he is presented with the gameover screen that many times. He does not play any practice games and fast forwards 460/461 of his turns. 
