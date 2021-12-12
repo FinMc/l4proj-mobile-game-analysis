@@ -88,3 +88,6 @@
 
 ## 09 Dec 2021
 * *2 hours* Remove repeated patterns like refresh & login so now the data is more accurate, refreshed all
+
+## 12 Dec 2021
+* *2 hours* Removed refresh from dataset and capped the session length to 200 as that covers 98% of sessions and removes extreme results
