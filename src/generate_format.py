@@ -304,15 +304,15 @@ with open(inp_file_name, "rb") as inp:
                 "%Y-%m-%d %H:%M:%S")
 
 # Trim the sessions to remove outliers
-# for i in range(len(outfile)):
-#     del_data = []
-#     for j in range(len(outfile[i]["sessions"])):
-#         if len(outfile[i]["sessions"][j]) > 200:
-#             del_data.append(j)
-#     offset = 0
-#     for j in range(len(del_data)):
-#         del outfile[i]["sessions"][del_data[j]-offset]
-#         offset += 1
+for i in range(len(outfile)):
+    del_data = []
+    for j in range(len(outfile[i]["sessions"])):
+        if len(outfile[i]["sessions"][j]) > 200:
+            del_data.append(j)
+    offset = 0
+    for j in range(len(del_data)):
+        del outfile[i]["sessions"][del_data[j]-offset]
+        offset += 1
 
 #Add the final UseStop to each user
 for i in range(len(outfile)):
