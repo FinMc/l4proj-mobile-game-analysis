@@ -6,6 +6,7 @@ from datetime import datetime
 #The formatted file
 inp_file_name = sys.argv[1]
 
+# User times
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 

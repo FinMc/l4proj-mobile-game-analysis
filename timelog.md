@@ -91,3 +91,4 @@
 
 ## 12 Dec 2021
 * *2 hours* Removed refresh from dataset and capped the session length to 200 as that covers 98% of sessions and removes extreme results
+* *1.5 hour* Rerunning PAM Models for the new dataset
