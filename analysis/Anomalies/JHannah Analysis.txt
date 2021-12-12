@@ -1,6 +1,6 @@
 =-=-=Top 1 event anomaly=-=-=
 Username: 				JHannah
-Total Events: 			7506
+Total Events: 			7135
 Length of long session: 2640
 First Login: 			2020-05-14
 Last Login: 			2020-07-09
@@ -11,8 +11,7 @@ Event Complete Time: 	2020-05-14 23: 21: 01
 "move_made": 622,
 "rolls_fastforwarded": 619,
 "move_viewed": 668,
-"home": 268,
-"refresh": 101,
+"home": 264,
 "joined_queue": 31,
 "choose_char": 34,
 "gameover": 33,
@@ -24,3 +23,5 @@ Event Complete Time: 	2020-05-14 23: 21: 01
 "challenge_sent": 1,
 "UseStop": 1
 }
+
+A heavy intense session with many games played and lots of moves. No practice games were played, this is the 

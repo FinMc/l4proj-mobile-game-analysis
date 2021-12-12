@@ -25,35 +25,61 @@ inp_file_name = sys.argv[1]
 #     for user in users:
 #         print("{user}: {time}".format(user=user[0], time=user[1]))
 
-# Session lengths to csv
-with open(inp_file_name, "rb") as inp:
-    out = ijson.items(inp, 'item')
+# with open(inp_file_name, "rb") as inp:
+#     out = ijson.items(inp, 'item')
 
-    users = []
-    type_dict = {}
-    for user in out:
-        on = True
-        # summer = 0
-        for session in user['sessions']:
-            # summer += len(session)
-            if len(session) == 2640:
-                for event in session:
-                    if type_dict.get(event["data"]):
-                        type_dict[event["data"]] += 1
-                    else:
-                        type_dict[event["data"]] = 1
-                print(session)
-                # print(user["deviceid"])
-                break
-            # users.append(len(session))  
-        # users.append([user["deviceid"], summer])
-    # users.sort(key=lambda x: x[1])
-    # users.reverse()
-    # for user in users:
-    #     print("{0} : {1}".format(user[0], user[1]))
+#     users = []
+#     type_dict = {}
+#     for user in out:
+#         on = True
+#         summer = 0
+#         for session in user['sessions']:
+#             summer += len(session)
+#         users.append([user["deviceid"], summer])
+#     users.sort(key=lambda x: x[1])
+#     users.reverse()
+#     for user in users:
+#         print("{0} : {1}".format(user[0], user[1]))
+
+# Session lengths to csv
+# with open(inp_file_name, "rb") as inp:
+#     out = ijson.items(inp, 'item')
+
+#     users = []
+#     type_dict = {}
+#     for user in out:
+#         for session in user['sessions']:
+#             users.append([user["deviceid"],len(session)])
+#     users.sort(key=lambda x: x[1])
+#     for user in users:
+#         # print("{0} : {1}".format(user[0], user[1]))
+#         # 
+#         # CSV
+#         print("{0},".format(user[1]))
+
+# Session analyser
+# with open(inp_file_name, "rb") as inp:
+#     out = ijson.items(inp, 'item')
+
+#     users = []
+#     type_dict = {}
+#     for user in out:
+#         on = True
+#         for session in user['sessions']:
+#             if len(session) == 2535:
+#                 for event in session:
+#                     if type_dict.get(event["data"]):
+#                         type_dict[event["data"]] += 1
+#                     else:
+#                         type_dict[event["data"]] = 1
+#                 print(session)
+#                 # print(type_dict)
+#                 # print(user["deviceid"])
+#                 break
 
 
 #Session Length
+# python user_data.py com_data.json > session_length.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 #     session_lengths = []
@@ -72,22 +98,24 @@ with open(inp_file_name, "rb") as inp:
 # print("STD: {sd}".format(sd=np.std(math_sessions)))
 
 # No. Events per Session
-# with open(inp_file_name, "rb") as inp:
-#     out = ijson.items(inp, 'item')
-#     no_events_session = []
-#     for user in out:
-#         for session in user["sessions"]:
-#             no_events_session.append(len(session))
+# python user_data.py com_data.json > no_events_per_session.txt
+with open(inp_file_name, "rb") as inp:
+    out = ijson.items(inp, 'item')
+    no_events_session = []
+    for user in out:
+        for session in user["sessions"]:
+            no_events_session.append(len(session))
 
 
-# math_sessions = np.array(no_events_session)
-# print("Average: {avg}".format(avg=np.mean(math_sessions)))
-# print("Median: {med}".format(med=np.median(math_sessions)))
-# print("Min: {min}".format(min=np.min(math_sessions)))
-# print("Max: {max}".format(max=np.max(math_sessions)))
-# print("STD: {sd}".format(sd=np.std(math_sessions)))
+math_sessions = np.array(no_events_session)
+print("Average: {avg}".format(avg=np.mean(math_sessions)))
+print("Median: {med}".format(med=np.median(math_sessions)))
+print("Min: {min}".format(min=np.min(math_sessions)))
+print("Max: {max}".format(max=np.max(math_sessions)))
+print("STD: {sd}".format(sd=np.std(math_sessions)))
 
 #No. Sessions
+# python user_data.py com_data.json > no_sessions.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 #     no_sessions = []
@@ -104,6 +132,7 @@ with open(inp_file_name, "rb") as inp:
 
 
 #No. Events per User
+# python user_data.py com_data.json > no_events_per_user.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 #     no_events_user = []

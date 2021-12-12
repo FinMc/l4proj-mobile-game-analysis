@@ -194,7 +194,6 @@ mappings = {
     "challenge_sent": "challenge_sent",
     "login": "login",
     "joined_queue": "joined_queue",
-    "hs_refresh_pressed": "refresh",
     "searching_from_find_games": "searching",
     "searched_for_opponent": "searching",
     "home_to_choose_chars": "choose_char",
@@ -208,7 +207,6 @@ mappings = {
     "tabbed_to_history": "history",
     "home_screen_to_leaderboard": "leaderboard",
     "game_history_checked": "game_history",
-    "refresh_online_game_pressed": "refresh",
     "home_screen_to_practice_select": "practice_select",
     "practice_character_selected": "practice_char",
     "practice_selection_to_game": "practice_game",
@@ -309,7 +307,7 @@ with open(inp_file_name, "rb") as inp:
 # for i in range(len(outfile)):
 #     del_data = []
 #     for j in range(len(outfile[i]["sessions"])):
-#         if len(outfile[i]["sessions"][j]) > 150:
+#         if len(outfile[i]["sessions"][j]) > 200:
 #             del_data.append(j)
 #     offset = 0
 #     for j in range(len(del_data)):
