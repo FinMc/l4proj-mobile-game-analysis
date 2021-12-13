@@ -54,7 +54,8 @@ while loop < len(files) - 1:
     for test in outs.keys():
         filename = outs[test]["name"]+"-k"+str(outs[test]["k"])+"-"+str(
             outs[test]["start"])+"-"+str(outs[test]["end"])+"-min"+str(outs[test]["min"])+".txt"
-        with open("prism_outs\\"+str(outs[test]["start"])+"-"+str(outs[test]["end"])+"\\k"+str(max_k)+"\\"+filename, "w") as outputWriter:
+        with open("out_files\\"+str(outs[test]["start"])+"-"+str(outs[test]["end"])+"\\k"+str(max_k)+"\\"+filename, "w") as outputWriter:
             results = outs[test]["results"]
             for i in results:
-                outputWriter.write("{0:20} {1}\n".format(states[int(i[0])], i[1]))
+                outputWriter.write(
+                    "{0:20} {1}\n".format(states[int(i[0])], i[1]))
