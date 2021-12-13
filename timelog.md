@@ -95,3 +95,5 @@
 
 ## 13 Dec 2021
 * *1 hour* Changes made to prism output converter
+* *0.5 hour* Ran prism files through all PAM
+* *2 hours* Started analysis of prism outputs by comparing probabilities
