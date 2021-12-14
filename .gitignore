@@ -1,3 +1,4 @@
 .vscode/
 */*_data.json
 */out_files/
+*/old_*/

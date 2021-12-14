@@ -1,0 +1,127 @@
+[
+	{
+		"name": "VisitProbInit",
+		"properties": "const int N; const int j; \nP=?[F<=N (y=j)]\n",
+		"arguments": "-const N=100,j=0:1:23"
+	},
+	{
+		"name": "StepCountInit",
+		"properties": "const int N; const int j; \nR{\"r_Steps\"}=?[F (y=j)]\n",
+		"arguments": "-const N=100,j=0:1:23"
+	},
+	{
+		"name": "VisitCountInit_Registration",
+		"properties": "const int N; \nfilter(state,R{\"r_registration\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_Challenge_Sent",
+		"properties": "const int N; \nfilter(state,R{\"r_challenge_sent\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_Login",
+		"properties": "const int N; \nfilter(state,R{\"r_login\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_Searching",
+		"properties": "const int N; \nfilter(state,R{\"r_searching\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_ChooseChar",
+		"properties": "const int N; \nfilter(state,R{\"r_choose_char\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_Home",
+		"properties": "const int N; \nfilter(state,R{\"r_Home\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_Gameplay",
+		"properties": "const int N; \nfilter(state,R{\"r_gameplay\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_RollsFastForwarded",
+		"properties": "const int N; \nfilter(state,R{\"r_rolls_fastforwarded\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_MoveViewed",
+		"properties": "const int N; \nfilter(state,R{\"r_move_viewed\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_UseStop",
+		"properties": "const int N; \nfilter(state,R{\"r_UseStop\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_Leaderboard",
+		"properties": "const int N; \nfilter(state,R{\"r_leaderboard\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_Profile",
+		"properties": "const int N; \nfilter(state,R{\"r_profile\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_Gameover",
+		"properties": "const int N; \nfilter(state,R{\"r_gameover\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_History",
+		"properties": "const int N; \nfilter(state,R{\"r_history\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_GameHistory",
+		"properties": "const int N; \nfilter(state,R{\"r_game_history\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_GameAbandoned",
+		"properties": "const int N; \nfilter(state,R{\"r_game_abandoned\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_PracticeSelect",
+		"properties": "const int N; \nfilter(state,R{\"r_practice_select\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_JoinedQueue",
+		"properties": "const int N; \nfilter(state,R{\"r_joined_queue\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_Logout",
+		"properties": "const int N; \nfilter(state,R{\"r_logout\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_MoveMade",
+		"properties": "const int N; \nfilter(state,R{\"r_move_made\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_LeftQueue",
+		"properties": "const int N; \nfilter(state,R{\"r_left_queue\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_PracticeChar",
+		"properties": "const int N; \nfilter(state,R{\"r_practice_char\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	},
+	{
+		"name": "VisitCountInit_PracticeGame",
+		"properties": "const int N; \nfilter(state,R{\"r_practice_game\"}=?[C<=N],\"UseStart\")\n",
+		"arguments": "-const N=100"
+	}
+]

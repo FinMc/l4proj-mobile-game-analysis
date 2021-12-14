@@ -43,19 +43,26 @@ while loop < len(files) - 1:
         for rrow in out:
             if rrow["k"] > max_k:
                 max_k = rrow["k"]
-            test_id = rrow["pctl"]["name"] + "k"+str(rrow["k"])
+            test_id = rrow["pctl"]["name"]
             if outs.get(test_id) is None:
+                res = {}
+                for i in range(24):
+                    res[i] = []
                 outs[test_id] = {"name": rrow["pctl"]["name"], "k": rrow["k"],
-                                "start": rrow["timecut"]["start"], "end": rrow["timecut"]["end"], "min": rrow["timecut"]["mindays"], "results": []}
+                                "start": rrow["timecut"]["start"], "end": rrow["timecut"]["end"], "min": rrow["timecut"]["mindays"], "results": res}
             value = rrow["result"]["value"]
             if value == None:
                 value = "inf"
-            outs[test_id]["results"].append([rrow["result"]["j"], value])
+            j_val = int(rrow["result"]["j"])
+            outs[test_id]["results"][j_val].append(value)
     for test in outs.keys():
-        filename = outs[test]["name"]+"-k"+str(outs[test]["k"])+"-"+str(
+        filename = outs[test]["name"]+"-"+str(
             outs[test]["start"])+"-"+str(outs[test]["end"])+"-min"+str(outs[test]["min"])+".txt"
         with open("out_files\\"+str(outs[test]["start"])+"-"+str(outs[test]["end"])+"\\k"+str(max_k)+"\\"+filename, "w") as outputWriter:
             results = outs[test]["results"]
-            for i in results:
-                outputWriter.write(
-                    "{0:20} {1}\n".format(states[int(i[0])], i[1]))
+            for k,v in results.items():
+                if len(v) == 2:
+                    outputWriter.write(
+                        "{:<25}{:<25}{:<}\n".format(states[int(k)], v[0], v[1]))
+                else:
+                    outputWriter.write("{:<25}{:<25}{:<25}{:<}\n".format(states[int(k)], v[0], v[1], v[2]))
