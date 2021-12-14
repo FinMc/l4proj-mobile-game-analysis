@@ -97,3 +97,8 @@
 * *1 hour* Changes made to prism output converter
 * *0.5 hour* Ran prism files through all PAM
 * *2 hours* Started analysis of prism outputs by comparing probabilities
+
+## 14 Dec 2021
+* *3 hours* Writing status report
+* *1 hour* Changes made to prism output converter to put all K values in same file rather than separate
+* *0.5 hours* Updated PRISM Properties file
