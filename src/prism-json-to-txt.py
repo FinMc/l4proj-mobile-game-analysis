@@ -39,11 +39,18 @@ while loop < len(files) - 1:
     outs = {}
     with open(files[loop], "rb") as inp:
         out = ijson.items(inp, 'item')
-        max_k = 0
+        max_k = -1
+        visitCountNum = -1
         for rrow in out:
             if rrow["k"] > max_k:
                 max_k = rrow["k"]
-            test_id = rrow["pctl"]["name"]
+            if rrow["result"].get("j") == None:
+                test_id = "VisitCountInit"
+                visitCountNum += 1
+                j_val = visitCountNum % 23 + 1
+            else:
+                test_id = rrow["pctl"]["name"]
+                j_val = int(rrow["result"]["j"])
             if outs.get(test_id) is None:
                 res = {}
                 for i in range(24):
@@ -53,7 +60,6 @@ while loop < len(files) - 1:
             value = rrow["result"]["value"]
             if value == None:
                 value = "inf"
-            j_val = int(rrow["result"]["j"])
             outs[test_id]["results"][j_val].append(value)
     for test in outs.keys():
         filename = outs[test]["name"]+"-"+str(
@@ -61,8 +67,11 @@ while loop < len(files) - 1:
         with open("out_files\\"+str(outs[test]["start"])+"-"+str(outs[test]["end"])+"\\k"+str(max_k)+"\\"+filename, "w") as outputWriter:
             results = outs[test]["results"]
             for k,v in results.items():
-                if len(v) == 2:
+                if len(v) == 1:
+                    outputWriter.write(
+                        "{:<25}{:<}\n".format(states[int(k)], v[0]))
+                elif len(v) == 2:
                     outputWriter.write(
                         "{:<25}{:<25}{:<}\n".format(states[int(k)], v[0], v[1]))
-                else:
+                elif len(v) == 3:
                     outputWriter.write("{:<25}{:<25}{:<25}{:<}\n".format(states[int(k)], v[0], v[1], v[2]))

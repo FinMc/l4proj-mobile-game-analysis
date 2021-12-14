@@ -36,7 +36,7 @@
 	},
 	{
 		"name": "VisitCountInit_Home",
-		"properties": "const int N; \nfilter(state,R{\"r_Home\"}=?[C<=N],\"UseStart\")\n",
+		"properties": "const int N; \nfilter(state,R{\"r_home\"}=?[C<=N],\"UseStart\")\n",
 		"arguments": "-const N=100"
 	},
 	{
