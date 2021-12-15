@@ -102,3 +102,6 @@
 * *3 hours* Writing status report
 * *1 hour* Changes made to prism output converter to put all K values in same file rather than separate
 * *0.5 hours* Updated PRISM Properties file
+
+## 15 Dec 2021
+* *3 hours* Ran PRISM files with new VisitCountInit for each kind
