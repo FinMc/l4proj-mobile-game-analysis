@@ -105,3 +105,14 @@
 
 ## 15 Dec 2021
 * *3 hours* Ran PRISM files with new VisitCountInit for each kind
+
+## 05 Jan 2022
+* *5 hours* Spent time on Introduction & Background of disseration
+
+## 06 Jan 2022
+* *4 hours* Spent time on the Background and completed the introduction of presentation
+
+## 07 Jan 2022
+* *3 hours* Work on dissertation added section on RPGLite
+* *1 hour* Downloading and playing RPGLite on 2 mobile phones to know what the game plays like
+* *1 hour* Investigating the difference if prev_prev was kept in the main generate format. Found 200,000 lines difference where the majority would be about how the game was played, whether they fastforwarded rolls or not. Worth talking about how it can remove tasks such as home->leaderboard->home
