@@ -57,6 +57,7 @@ while loop < len(files) - 1:
                     res[i] = []
                 outs[test_id] = {"name": rrow["pctl"]["name"], "k": rrow["k"],
                                 "start": rrow["timecut"]["start"], "end": rrow["timecut"]["end"], "min": rrow["timecut"]["mindays"], "results": res}
+            value = rrow["result"]["value"]
             if value == None:
                 value = "inf"
             outs[test_id]["results"][j_val].append(value)
