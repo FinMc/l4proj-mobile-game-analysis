@@ -152,3 +152,18 @@ inp_file_name = sys.argv[1]
 # print("Min: {min}".format(min=np.min(math_sessions)))
 # print("Max: {max}".format(max=np.max(math_sessions)))
 # print("STD: {sd}".format(sd=np.std(math_sessions)))
+
+#No. of occurrences per action
+# python user_data.py com_data.json > kind_vals.txt
+# with open(inp_file_name, "rb") as inp:
+#     out = ijson.items(inp, 'item')
+#     kind_vals = {}
+#     for user in out:
+#         for session in user["sessions"]:
+#             for event in session:
+#                 if kind_vals.get(event["data"]) == None:
+#                     kind_vals[event["data"]] = 1
+#                 else:
+#                     kind_vals[event["data"]] += 1
+#     for k, v in sorted(kind_vals.items(), key=lambda x: x[1]):
+#         print("{:<25} : {:<}".format(k, v))
