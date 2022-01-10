@@ -116,3 +116,7 @@
 * *3 hours* Work on dissertation added section on RPGLite
 * *1 hour* Downloading and playing RPGLite on 2 mobile phones to know what the game plays like
 * *1 hour* Investigating the difference if prev_prev was kept in the main generate format. Found 200,000 lines difference where the majority would be about how the game was played, whether they fastforwarded rolls or not. Worth talking about how it can remove tasks such as home->leaderboard->home
+
+## 10 Jan 2022
+* *3 hours* Looked at difference in values between time intervals from PRISM analysis
+* *2 hours* Time spent on dissertation with finishing section on RPGLite background
