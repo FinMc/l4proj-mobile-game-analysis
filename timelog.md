@@ -120,3 +120,10 @@
 ## 10 Jan 2022
 * *3 hours* Looked at difference in values between time intervals from PRISM analysis
 * *2 hours* Time spent on dissertation with finishing section on RPGLite background
+
+## 22 Jan 2022
+* *3 hours* Worked on chapter 4 of the dissertation, working with the dataset
+
+## 24 Jan 2022
+* *2 hours* Read background on probabilistic temporal properties
+* 
