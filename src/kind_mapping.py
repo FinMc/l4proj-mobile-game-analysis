@@ -1,3 +1,6 @@
+"""
+The mapping for each kind in the data set
+"""
 mapping = {
     "home_screen_logout": "logout",
     "registration": "registration",

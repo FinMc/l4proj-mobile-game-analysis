@@ -1,3 +1,8 @@
+"""
+User names of subset of users selected from the data set to be used in analysis
+Removes users with shorter than 100 actions
+"""
+
 users = [
     "l17r",
     "apropos0",

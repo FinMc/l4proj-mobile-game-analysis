@@ -1,3 +1,14 @@
+"""
+File used for getting the data set into the required format
+Run from the command line and takes 2 parameters the name of the input file (the data set) and an output file name (example.json)
+
+It collects takes a subset of users stored in users list and adds sessions of actions to them
+The mappings dictionary changes the mapping to a subset of kinds and removes kinds not needing explored (such as the "konami" kind)
+
+It then removes outlier session lengths
+Then adds a UseStop to each user at the end of the file
+"""
+
 import sys
 import ijson
 import json

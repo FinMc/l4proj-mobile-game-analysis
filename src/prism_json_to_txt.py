@@ -1,3 +1,9 @@
+"""
+Generates a readable file of the prism outputs and sorts into directories this file can then be used for further analysis in excel
+Makes it a better way to read the outputs from PRISM from the different SAP properties
+
+Run from command line with no parameters
+"""
 import ijson
 import os
 states = {
