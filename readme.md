@@ -1,27 +1,22 @@
-# Guidance
-This is a suggested template for a project. You can modify it as you please, but
-but remember to keep:
+# MODELLING & ANALYSIS OF THE USAGE OF A MOBILE APPLICATION
 
-* a timelog, updated regularly in the `timelog.md` format;
-* all source under version control;
-* data well organised and with appropriate ethical approval (for human subject data);
+## This repo looks to explore the usage patterns on the RPGLite data set. 
 
-Here's an overview of the structure as it stands:
+### This is a Level 4 individual project at the University of Glasgow
 
-* `timelog.md` The time log for your project.
-* `plan.md` A skeleton week-by-week plan for the project. 
-* `data/` data you acquire during the project
-* `src/` source code for your project
-* `status_report/` the status report submitted in December
-* `meetings/` Records of the meetings you have during the project.
-* `dissertation/` source and for your project dissertation
-* `presentation/` your presentation
+The research aims to find differences in usage styles with the RPGLite game data.
 
-* Make sure you add a `.gitignore` or similar for your VCS for the tools you are using!
-* Add any appropriate continuous integration (e.g. Travis CI) in this directory.
+RPGLite is a multiplayer mobile game that was created for research purposes and gather data on players for further analysis
 
-* Remove this `readme.md` file from any repository and replace it with something more appropriate!
+The data set is linked here: [RPGLite data set](https://researchdata.gla.ac.uk/1070/)
 
-## Important
-* It should be easy to rebuild and run your project and your dissertation
-        * Include clear instructions in the relevant directories to make this possible
+
+## This repo has the tools needed to:
+ - Parse the data set into the correct format needed for running the Expectation Maximisation Algorithm on it
+ - Remove unnecessary data from the data set including game history and player stats
+ - Remove outliers in the data set
+ - Output descriptive statistics on the data set
+ - Provide a utility of converting PRISM json outputs into an organised folder structure
+ - Present PRISM outputs into human readable results
+
+The [manual.md](src/manual.md) file includes a description on the usage of the tools required and instructions on how to use the tools
