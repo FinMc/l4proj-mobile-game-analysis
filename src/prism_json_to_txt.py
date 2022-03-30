@@ -1,4 +1,3 @@
-import sys
 import ijson
 import os
 states = {
@@ -66,7 +65,7 @@ while loop < len(files) - 1:
             outs[test]["start"])+"-"+str(outs[test]["end"])+"-min"+str(outs[test]["min"])+".txt"
         with open("out_files\\"+str(outs[test]["start"])+"-"+str(outs[test]["end"])+"\\k"+str(max_k)+"\\"+filename, "w") as outputWriter:
             results = outs[test]["results"]
-            for k,v in results.items():
+            for k, v in results.items():
                 if len(v) == 1:
                     outputWriter.write(
                         "{:<25}{:<}\n".format(states[int(k)], v[0]))
@@ -74,4 +73,5 @@ while loop < len(files) - 1:
                     outputWriter.write(
                         "{:<25}{:<25}{:<}\n".format(states[int(k)], v[0], v[1]))
                 elif len(v) == 3:
-                    outputWriter.write("{:<25}{:<25}{:<25}{:<}\n".format(states[int(k)], v[0], v[1], v[2]))
+                    outputWriter.write("{:<25}{:<25}{:<25}{:<}\n".format(
+                        states[int(k)], v[0], v[1], v[2]))
