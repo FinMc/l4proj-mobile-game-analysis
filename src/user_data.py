@@ -14,7 +14,7 @@ from datetime import datetime
 inp_file_name = sys.argv[1]
 
 # User times
-# python user_data.py com_data.json > user_times.txt
+# python user_data.py out.json > user_times.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 
@@ -37,7 +37,7 @@ inp_file_name = sys.argv[1]
 
 
 # Total User Actions
-# python user_data.py com_data.json > user_actions.txt
+# python user_data.py out.json > user_actions.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 
@@ -97,7 +97,7 @@ inp_file_name = sys.argv[1]
 
 
 #Session Length
-# python user_data.py com_data.json > session_length.txt
+# python user_data.py out.json > session_length.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 #     session_lengths = []
@@ -117,7 +117,7 @@ inp_file_name = sys.argv[1]
 
 
 # No. Events per Session
-# python user_data.py com_data.json > no_events_per_session.txt
+# python user_data.py out.json > no_events_per_session.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 #     no_events_session = []
@@ -135,7 +135,7 @@ inp_file_name = sys.argv[1]
 
 
 #No. Sessions
-# python user_data.py com_data.json > no_sessions.txt
+# python user_data.py out.json > no_sessions.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 #     no_sessions = []
@@ -152,7 +152,7 @@ inp_file_name = sys.argv[1]
 
 
 #No. Events per User
-# python user_data.py com_data.json > no_events_per_user.txt
+# python user_data.py out.json > no_events_per_user.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 #     no_events_user = []
@@ -172,7 +172,7 @@ inp_file_name = sys.argv[1]
 
 
 #No. of occurrences per action
-# python user_data.py com_data.json > kind_vals.txt
+# python user_data.py out.json > kind_vals.txt
 # with open(inp_file_name, "rb") as inp:
 #     out = ijson.items(inp, 'item')
 #     kind_vals = {}

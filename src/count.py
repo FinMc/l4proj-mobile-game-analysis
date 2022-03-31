@@ -3,7 +3,7 @@ Get the count of every user in the data set, used for initial data set understan
 """
 import ijson
 with open("vertical_data.json", "rb") as inp:
-    out = ijson.items(inp, 'item.page_hits.item')
+    out = ijson.items(inp, 'page_hits.item')
     users = {}
     for line in out:
         if users.get(line["kind"]):

@@ -249,7 +249,7 @@ user_mapping = {}
 
 user_counter = 0
 with open(inp_file_name, "rb") as inp:
-    out = ijson.items(inp, 'item.page_hits.item')
+    out = ijson.items(inp, 'page_hits.item')
 
     for line in out:
         if line['user'] in users and mappings.get(line['kind']) is not None:
