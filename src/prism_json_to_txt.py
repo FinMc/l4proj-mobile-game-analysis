@@ -70,7 +70,8 @@ while loop < len(files) - 1:
         filename = outs[test]["name"]+"-"+str(
             outs[test]["start"])+"-"+str(outs[test]["end"])+"-min"+str(outs[test]["min"])+".txt"
         try:
-            os.makedirs("out_files\\"+str(outs[test]["start"])+"-"+str(outs[test]["end"])+"\\k"+str(max_k)+"\\")
+            os.makedirs("out_files\\"+str(outs[test]["start"]) +
+                        "-"+str(outs[test]["end"])+"\\k"+str(max_k)+"\\")
         except WindowsError:
             None
         with open("out_files\\"+str(outs[test]["start"])+"-"+str(outs[test]["end"])+"\\k"+str(max_k)+"\\"+filename, "w") as outputWriter:

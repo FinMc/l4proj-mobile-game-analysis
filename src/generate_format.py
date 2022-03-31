@@ -278,7 +278,6 @@ with open(inp_file_name, "rb") as inp:
                 if len(outfile[user_id]['sessions'][-1]) >= 2:
                     prev_prev_kind = outfile[user_id]['sessions'][-1][-2]["data"]
 
-
             if "." not in line["time"]:
                 current_action_time = datetime.strptime(
                     line["time"], "%Y-%m-%d %H:%M:%S")
@@ -286,12 +285,14 @@ with open(inp_file_name, "rb") as inp:
                 current_action_time = datetime.strptime(
                     line["time"], "%Y-%m-%d %H:%M:%S.%f")
 
-            if mappings.get(line['kind']) not in  [prev_kind, prev_prev_kind]:
+            if mappings.get(line['kind']) not in [prev_kind, prev_prev_kind]:
                 # If more than 30mins between action, different session
                 if divmod((current_action_time - cur_session_time).total_seconds(), 60)[0] > 30:
-                    outfile[user_id]["sessions"].append([{"timestamp": current_action_time.strftime("%Y-%m-%d %H:%M:%S"), "data": "UseStart"}])
+                    outfile[user_id]["sessions"].append(
+                        [{"timestamp": current_action_time.strftime("%Y-%m-%d %H:%M:%S"), "data": "UseStart"}])
                     if len(outfile[user_id]["sessions"]) > 1:
-                        outfile[user_id]["sessions"][-2].append({"timestamp": cur_session_time.strftime("%Y-%m-%d %H:%M:%S"), "data": "UseStop"})
+                        outfile[user_id]["sessions"][-2].append(
+                            {"timestamp": cur_session_time.strftime("%Y-%m-%d %H:%M:%S"), "data": "UseStop"})
 
                 outfile[user_id]["sessions"][-1].append(
                     {"timestamp": current_action_time.strftime("%Y-%m-%d %H:%M:%S"), "data": mappings[line["kind"]]})
@@ -310,11 +311,12 @@ for i in range(len(outfile)):
         del outfile[i]["sessions"][del_data[j]-offset]
         offset += 1
 
-#Add the final UseStop to each user
+# Add the final UseStop to each user
 for i in range(len(outfile)):
     if len(outfile[i]["sessions"]) > 0:
         if outfile[i]["sessions"][-1][-1] != "UseStop":
-            outfile[i]["sessions"][-1].append({"timestamp": outfile[i]["sessions"][-1][-1]["timestamp"], "data": "UseStop"})
+            outfile[i]["sessions"][-1].append(
+                {"timestamp": outfile[i]["sessions"][-1][-1]["timestamp"], "data": "UseStop"})
     else:
         print("No Sessions: " + outfile[i]["deviceid"])
 
